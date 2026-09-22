@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Vraj Joshi</title>
+  <meta name="description" content="UX case studies and development projects by Vraj Joshi, spanning mobile apps, redesigns, and backend-focused builds." />
+  <meta property="og:title" content="Projects — Vraj Joshi" />
+  <meta property="og:description" content="UX case studies and development projects by Vraj Joshi." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="nav__brand" href="index.html">VJ<span aria-hidden="true">.</span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+          <path d="M0 1H18M0 7H18M0 13H18" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </button>
+      <ul class="nav__list" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="case-study.html">Case Study</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <span class="eyebrow">Projects</span>
+      <h1>Six products, six different problems.</h1>
+      <p>A mix of UX research-led design work and hands-on development, from a door-to-door delivery app to a WinForms desktop build. The Shopster project has a full written case study — <a href="case-study.html">read it here</a>.</p>
+    </section>
+
+    <section class="section container">
+      <div class="card-grid">
+        <a class="card project-card" href="projects/send-it-up.html">
+          <span class="project-card__tag">UX Design · Mobile</span>
+          <h3>Send-It-Up</h3>
+          <p>Door-to-door package delivery app designed for the Indian market, built around user interviews, surveys, and rapid prototyping.</p>
+        </a>
+
+        <a class="card project-card" href="projects/flexflow.html">
+          <span class="project-card__tag">UX Design · Onboarding</span>
+          <h3>FlexFlow</h3>
+          <p>Onboarding screens for a health &amp; fitness app, focused on animation and illustration to guide first-time users.</p>
+        </a>
+
+        <a class="card project-card" href="case-study.html">
+          <span class="project-card__tag">Full Case Study · Mobile</span>
+          <h3>Shopster</h3>
+          <p>Local shopping guide app — nearby malls and live deals. Full research-to-launch case study with usability testing outcomes.</p>
+        </a>
+
+        <a class="card project-card" href="projects/redesign-craigslist.html">
+          <span class="project-card__tag">UX Design · Redesign</span>
+          <h3>Redesign: Craigslist</h3>
+          <p>Modernizing one of the web's most recognizable marketplaces without losing what makes it simple.</p>
+        </a>
+
+        <a class="card project-card" href="projects/flight-reservation.html">
+          <span class="project-card__tag">Development · Desktop</span>
+          <h3>Flight Reservation</h3>
+          <p>A WinForms flight booking app built to demonstrate event-driven programming and data validation with C#.</p>
+        </a>
+
+        <a class="card project-card" href="projects/payroll.html">
+          <span class="project-card__tag">UX Design · Fintech</span>
+          <h3>Payroll</h3>
+          <p>A single-screen payments app UI designed for a client pitch, iterated after direct mentor feedback.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer__grid">
+      <p>© 2026 Vraj Joshi. Built from scratch with HTML, CSS &amp; Three.js.</p>
+      <ul class="footer__links">
+        <li><a href="mailto:vrajjoshi123@gmail.com">Email</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn<!-- TODO: add real LinkedIn URL --></a></li>
+        <li><a href="https://github.com/Vraj747" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* Nocturne design tokens */
+:root {
+  --color-bg: #0a0b0f;
+  --color-surface: #14161c;
+  --color-surface-raised: #1b1e26;
+  --color-border: #262a35;
+  --color-text: #f2f3f5;
+  --color-text-muted: #a3a8b5;
+  --color-accent-1: #7c5cff;
+  --color-accent-2: #22d3ee;
+  --color-accent-gradient: linear-gradient(120deg, var(--color-accent-1), var(--color-accent-2));
+  --color-focus: #22d3ee;
+
+  --font-heading: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Consolas", monospace;
+
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+  --step-3: clamp(2.25rem, 1.8rem + 2vw, 3.25rem);
+  --step-4: clamp(2.75rem, 2rem + 3.5vw, 4.5rem);
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+  --space-2xl: 8rem;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --max-width: 1200px;
+  --transition-fast: 150ms ease;
+  --transition-medium: 300ms ease;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Nocturne is intentionally dark-first; keep the same palette in light OS mode
+       since the brand relies on contrast against near-black, not on inverting. */
+  }
+}
