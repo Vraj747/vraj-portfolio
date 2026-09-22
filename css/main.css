@@ -240,6 +240,32 @@
   margin-block: var(--space-md);
 }
 
+.case-artifact img,
+.figure-grid img {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  width: 100%;
+  height: auto;
+  background: var(--color-surface-raised);
+}
+
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-sm) 0 0;
+  list-style: none;
+  padding: 0;
+}
+
+.figure-grid figcaption,
+.case-artifact figcaption {
+  margin-top: var(--space-xs);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+}
+
 .case-artifact__label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
