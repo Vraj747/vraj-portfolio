@@ -23,7 +23,7 @@
 
 .journey__panel-inner {
   max-width: 640px;
-  background: rgba(20, 22, 28, 0.55);
+  background: rgba(10, 11, 15, 0.78);
   backdrop-filter: blur(14px);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);

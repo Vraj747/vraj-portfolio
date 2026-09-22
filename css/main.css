@@ -118,12 +118,12 @@
 
 .btn--primary {
   background: var(--color-accent-gradient);
-  color: #0a0b0f;
+  color: #000;
 }
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  color: #0a0b0f;
+  color: #000;
 }
 
 .btn--ghost {
@@ -214,6 +214,21 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-md);
+}
+
+.skills-grid h3 {
+  font-size: var(--step-1);
+  margin-bottom: var(--space-xs);
+}
+
+/* Metadata label inside a card (Role / Timeline / Tools) — not a heading */
+.card-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.5em;
 }
 
 /* Case study specific */
