@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UX Case Study: Shopster — Vraj Joshi</title>
+  <meta name="description" content="Full UX case study for Shopster, a local shopping guide app: research, problem statement, ideation, prototyping, usability testing, and final design brief." />
+  <meta property="og:title" content="UX Case Study: Shopster — Vraj Joshi" />
+  <meta property="og:description" content="Full UX case study: research through final design brief." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="nav__brand" href="index.html">VJ<span aria-hidden="true">.</span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+          <path d="M0 1H18M0 7H18M0 13H18" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </button>
+      <ul class="nav__list" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="case-study.html" aria-current="page">Case Study</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <span class="eyebrow">UX Case Study</span>
+      <h1>Shopster: helping shoppers find nearby deals without the guesswork.</h1>
+      <p>A mobile app that surfaces nearby malls and live, trending deals — designed end-to-end from research through a validated, tested UI.</p>
+
+      <nav aria-label="Case study sections">
+        <ul class="case-nav">
+          <li><a href="#overview">1. Overview</a></li>
+          <li><a href="#research">2. Research</a></li>
+          <li><a href="#problem">3. Problem</a></li>
+          <li><a href="#ideation">4. Ideation</a></li>
+          <li><a href="#prototyping">5. Prototyping</a></li>
+          <li><a href="#testing">6. Testing</a></li>
+          <li><a href="#solution">7. Solution</a></li>
+          <li><a href="#development">8. Development</a></li>
+          <li><a href="#reflection">9. Reflection</a></li>
+          <li><a href="#brief">Design Brief</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- 1. Project Overview -->
+    <section class="section container" id="overview">
+      <h2>1. Project Overview</h2>
+      <p>Shopster is a mobile app that helps shoppers locate nearby malls and browse trending, featured deals on the brands inside them. It combines location-based discovery with promotional content so users can decide where to shop based on what's actually on offer nearby — instead of finding out about a discount after the fact.</p>
+      <div class="card-grid">
+        <div class="card"><h4>Role</h4><p>UX design, UI design, UX research, technical writing, documentation</p></div>
+        <div class="card"><h4>Team</h4><p>1 UX designer, dev team, PMs</p></div>
+        <div class="card"><h4>Timeline</h4><p>2 weeks — 5 days research, 1 week design &amp; testing, 2 days refinement</p></div>
+        <div class="card"><h4>Tools</h4>
+          <ul class="tag-list"><li>Figma</li><li>Miro</li><li>Axure</li><li>Jira</li><li>Analytics</li><li>GPT / Midjourney</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. User Research & Discovery -->
+    <section class="section container" id="research">
+      <h2>2. User Research &amp; Discovery</h2>
+      <p>Malls offer a lot in one place, but shoppers had no reliable way to know which nearby malls had active discounts without visiting in person or catching a flyer. Research combined interviews, a broad survey, and a review of how people currently used competing tools (mall directories, generic maps apps, retailer-specific apps) to discover that gap.</p>
+
+      <h3>Interview questions</h3>
+      <ul>
+        <li>How do you currently discover which malls are nearby and what's on offer there?</li>
+        <li>What role do mobile apps play in your shopping decisions today?</li>
+        <li>Would you use — and trust — an app that surfaced live discounts nearby?</li>
+      </ul>
+
+      <h3>Survey insights</h3>
+      <p>A multiple-choice survey distributed across shopping communities returned strong interest in personalized shopping apps, especially among younger, tech-savvy users who wanted real-time discount alerts rather than relying on flyers. Older, less tech-inclined respondents still shopped mostly in person but were just as interested in seasonal offer alerts — the need crossed age groups even if the preferred channel didn't.</p>
+
+      <div class="case-artifact">
+        <span class="case-artifact__label">Artifact 1 — Competitive Analysis</span>
+        <h4>How existing tools fell short</h4>
+        <p>Generic map apps show store locations but not live offers. Mall directory apps are static and rarely updated. Retailer apps are siloed to a single brand, forcing users to check multiple apps to compare deals across a mall. None combined proximity, live deals, and cross-brand browsing in one place — the gap Shopster was built to fill.</p>
+      </div>
+    </section>
+
+    <!-- 3. Problem Statement -->
+    <section class="section container" id="problem">
+      <h2>3. Problem Statement</h2>
+      <p>Shoppers can't easily tell which nearby malls have active discounts, or which stores within them are worth a visit — the information exists, but it's scattered across flyers, individual retailer apps, and word of mouth.</p>
+      <p><strong>Design goal:</strong> design a mobile app for shoppers in search of nearby discounts, to simplify the process of finding them, so users can make informed shopping decisions and save time.</p>
+    </section>
+
+    <!-- 4. Ideation -->
+    <section class="section container" id="ideation">
+      <h2>4. Ideation</h2>
+      <p>Three personas were developed from the interview and survey data to keep the team designing for real, distinct user goals instead of a single generic "shopper."</p>
+
+      <div class="case-artifact">
+        <span class="case-artifact__label">Artifact 2 — User Personas</span>
+        <h4>Grounding the design in real segments</h4>
+        <p>Personas captured demographics, tech comfort, and shopping motivations — from deal-driven younger shoppers who wanted real-time alerts, to more traditional in-person shoppers who valued seasonal offer notifications over constant updates. They were revisited at every major ideation and prototyping checkpoint to keep the team from designing for itself.</p>
+      </div>
+
+      <p>From the personas, the team sketched the core flow: find nearby malls → browse trending/featured deals → drill into a specific store. Navigation architecture was brainstormed around that flow before any visual design began.</p>
+    </section>
+
+    <!-- 5. Prototyping -->
+    <section class="section container" id="prototyping">
+      <h2>5. Prototyping</h2>
+      <p>Initial sketches became low-fidelity Figma wireframes, layered with stock imagery and marketing copy, then tested informally against similar apps before moving to high fidelity.</p>
+
+      <div class="case-artifact">
+        <span class="case-artifact__label">Artifact 3 — Wireframes</span>
+        <h4>[TODO: add wireframe export from Figma]</h4>
+        <p>Low-fidelity wireframes for the home screen and nearby-malls flow, showing initial navigation structure before the navbar redesign described below.</p>
+      </div>
+
+      <p>High-fidelity prototypes were then built in Axure and Figma, primarily on iOS frames, with cross-platform usability testing on both Android and iOS to confirm the experience held up outside its primary design target.</p>
+    </section>
+
+    <!-- 6. Usability Testing & Outcomes -->
+    <section class="section container" id="testing">
+      <h2>6. Usability Testing &amp; Outcomes</h2>
+      <p>Two rounds of usability testing were run: an initial round to surface problems, and a second round after fixes to confirm they worked.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h4>Problem found</h4>
+          <p>Users were uncertain how to use the first navbar. The buttons worked correctly, but their purpose wasn't clear at a glance — a comprehension issue, not a functional one.</p>
+        </div>
+        <div class="card">
+          <h4>Solution shipped</h4>
+          <p>The navbar was rebuilt with self-explanatory icons pointing to the app's core sections, plus a dedicated notification button. The revised design was re-tested and confirmed the confusion was resolved.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Final Solution & Design Brief -->
+    <section class="section container" id="solution">
+      <h2>7. Final Solution</h2>
+      <p>Shopster shipped as a mobile app with a home screen for discovering nearby malls, a clear icon-based navbar, and deal browsing that separates trending offers from store-specific ones — validated through two rounds of usability testing and built on a foundation of real interview and survey data rather than assumption.</p>
+    </section>
+
+    <!-- 8. Development -->
+    <section class="section container" id="development">
+      <h2>8. Development</h2>
+      <p>As the UX/UI designer, I worked alongside a dedicated dev team and PMs rather than implementing the app myself, so this section focuses on the technical constraints that shaped the design rather than a build log.</p>
+      <ul>
+        <li><strong>Location data:</strong> the "nearby malls" flow had to degrade gracefully when location permissions were denied or GPS accuracy was poor — this constrained how much of the UI could assume precise location.</li>
+        <li><strong>Live deals:</strong> "trending" and "featured" deals implied near-real-time data, which meant designing loading and stale-data states, not just the happy path.</li>
+        <li><strong>Cross-platform parity:</strong> designing primarily on iOS frames while testing on Android meant flagging platform-specific navigation conventions (back gestures, tab bar placement) early rather than after handoff.</li>
+      </ul>
+    </section>
+
+    <!-- 9. Reflection -->
+    <section class="section container" id="reflection">
+      <h2>9. Reflection &amp; Lessons Learned</h2>
+      <p>This was the first project where I worked without a strict style guide like Material Design or iOS Human Interface Guidelines to lean on — the concept was unique enough that there wasn't a close reference to follow, which pushed the design decisions to be justified by user data rather than convention.</p>
+      <p>The clearest lesson was that a confusing navbar can undermine an otherwise solid information architecture — the underlying structure was correct, but if users can't tell what a control does, that structure doesn't matter. Testing with real users, twice, is what caught it.</p>
+    </section>
+
+    <!-- Design Brief -->
+    <section class="section container" id="brief">
+      <h2>Design Brief</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h4>Goals &amp; audience</h4>
+          <p>Help shoppers in India discover nearby malls and live deals faster than flyers or single-retailer apps allow. Primary audience: mobile-first shoppers ranging from deal-driven younger users to less tech-inclined in-person shoppers who still want offer alerts.</p>
+        </div>
+        <div class="card">
+          <h4>Key UI decisions</h4>
+          <p><strong>Layout:</strong> proximity-first home screen (nearby malls surfaced immediately). <strong>Typography &amp; color:</strong> a modern, light theme with precise spacing, chosen to feel current without borrowing a specific platform's visual language, since no single style guide fit the product's unique premise. <strong>Navigation:</strong> icon-first navbar, redesigned after testing showed the original was functionally correct but not self-explanatory.</p>
+        </div>
+        <div class="card">
+          <h4>Accessibility considerations</h4>
+          <p>Icon-only navigation was paired with accessible labels (not just visual icons) after the navbar rework, so the fix addressed both comprehension and screen-reader accessibility. Location-permission-denied states were designed explicitly rather than left blank, so the app stays usable without GPS access.</p>
+        </div>
+        <div class="card">
+          <h4>Key lesson learned</h4>
+          <p>A UI element can be functionally correct and still fail users if its purpose isn't legible at a glance — usability testing exists to catch exactly that gap between "it works" and "it's understood."</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <a class="btn btn--ghost" href="projects.html">← Back to projects</a>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer__grid">
+      <p>© 2026 Vraj Joshi. Built from scratch with HTML, CSS &amp; Three.js.</p>
+      <ul class="footer__links">
+        <li><a href="mailto:vrajjoshi123@gmail.com">Email</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn<!-- TODO: add real LinkedIn URL --></a></li>
+        <li><a href="https://github.com/Vraj747" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

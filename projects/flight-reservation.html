@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flight Reservation — Vraj Joshi</title>
+  <meta name="description" content="A WinForms flight booking app built with C#, focused on event-driven programming and data validation with regular expressions." />
+  <meta property="og:title" content="Flight Reservation — Vraj Joshi" />
+  <meta property="og:description" content="WinForms flight booking app demonstrating backend and event-driven programming." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="nav__brand" href="../index.html">VJ<span aria-hidden="true">.</span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+          <path d="M0 1H18M0 7H18M0 13H18" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </button>
+      <ul class="nav__list" id="primary-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html" aria-current="page">Projects</a></li>
+        <li><a href="../case-study.html">Case Study</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <span class="eyebrow">Development · Desktop</span>
+      <h1>Flight Reservation</h1>
+      <p>A WinForms flight booking app, built to demonstrate backend fundamentals — event-driven programming, data validation, and clean structure — with design deliberately kept out of the way.</p>
+    </section>
+
+    <section class="section container">
+      <div class="card-grid">
+        <div class="card"><h4>Role</h4><p>Software developer</p></div>
+        <div class="card"><h4>Timeline</h4><p>2 weeks (1.5 weeks development)</p></div>
+        <div class="card"><h4>Tools</h4>
+          <ul class="tag-list"><li>Visual Studio</li><li>C#</li><li>Figma</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Overview</h2>
+      <p>This was an individual skill-growth project, not a client engagement — the goal was to showcase backend programming ability rather than visual design. The app handles flight bookings through a Windows Forms interface, with dynamic form elements, efficient event handling, and validation built with regular expressions to keep data reliable.</p>
+    </section>
+
+    <section class="section container">
+      <h2>Process</h2>
+      <ul>
+        <li><strong>Wireframes:</strong> pen sketches translated into low-fidelity wireframes in Figma to plan layout — not to ideate design direction, since the flow itself was already defined before development started.</li>
+        <li><strong>Usability testing:</strong> conducted informally with colleagues rather than end users, since the focus was backend skill growth, not UX validation.</li>
+        <li><strong>UI:</strong> given only enough attention for clean spacing and logical element ordering — intentionally not a design showcase.</li>
+      </ul>
+    </section>
+
+    <section class="section container">
+      <h2>Learnings</h2>
+      <p>Building this reinforced how much meticulous, defensive coding matters even in a small desktop app — regex validation and event handling have to hold up under real (if informal) user interaction. It also made clear that "user-focused" thinking applies to backend work too, not just interfaces.</p>
+    </section>
+
+    <section class="section container">
+      <a class="btn btn--ghost" href="../projects.html">← Back to projects</a>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer__grid">
+      <p>© 2026 Vraj Joshi. Built from scratch with HTML, CSS &amp; Three.js.</p>
+      <ul class="footer__links">
+        <li><a href="mailto:vrajjoshi123@gmail.com">Email</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn<!-- TODO: add real LinkedIn URL --></a></li>
+        <li><a href="https://github.com/Vraj747" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+</body>
+</html>

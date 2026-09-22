@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redesign: Craigslist — Vraj Joshi</title>
+  <meta name="description" content="A modernization pass on Craigslist's UI and navigation, informed by reverse usability testing on the original site." />
+  <meta property="og:title" content="Redesign: Craigslist — Vraj Joshi" />
+  <meta property="og:description" content="Modernizing one of the web's most recognizable marketplaces." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="nav__brand" href="../index.html">VJ<span aria-hidden="true">.</span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+          <path d="M0 1H18M0 7H18M0 13H18" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </button>
+      <ul class="nav__list" id="primary-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html" aria-current="page">Projects</a></li>
+        <li><a href="../case-study.html">Case Study</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <span class="eyebrow">UX Design · Redesign</span>
+      <h1>Redesign: Craigslist</h1>
+      <p>Modernizing one of the internet's most recognizable — and most dated — marketplaces, without losing what made it work.</p>
+    </section>
+
+    <section class="section container">
+      <div class="card-grid">
+        <div class="card"><h4>Role</h4><p>UX design, UX research, UI design for onboarding</p></div>
+        <div class="card"><h4>Timeline</h4><p>10 days (4 days research, 6 days design &amp; testing)</p></div>
+        <div class="card"><h4>Tools</h4>
+          <ul class="tag-list"><li>Miro</li><li>Figma</li><li>Zeplin</li><li>Notion</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Problem</h2>
+      <p>Craigslist's minimalism, once a strength, had become a liability: a cluttered, complex interface made navigation genuinely difficult, and the UI as a whole needed refurbishing without losing the platform's core simplicity.</p>
+
+      <h2>Solution</h2>
+      <p>Modernize the platform's navigation and visual design while keeping its core functionality and simplicity intact — responding directly to what users said they wanted, not redesigning for its own sake.</p>
+    </section>
+
+    <section class="section container">
+      <h2>Reverse usability testing</h2>
+      <p>Instead of testing a new prototype, I navigated users through the <em>original</em> Craigslist site to observe where they struggled firsthand. The biggest issue: information overload — too much clustered data on a single page, making it hard to find anything quickly.</p>
+      <ul>
+        <li><strong>Categorized layout:</strong> group similar listings together for a clearer visual structure</li>
+        <li><strong>Concise information:</strong> avoid overwhelming users with excessive detail up front</li>
+        <li><strong>User-friendly filters:</strong> let users narrow results instead of scanning everything</li>
+        <li><strong>Whitespace:</strong> reduce cognitive load with a cleaner layout</li>
+        <li><strong>Progressive disclosure:</strong> reveal information as it's needed, not all at once</li>
+      </ul>
+    </section>
+
+    <section class="section container">
+      <h2>UI direction</h2>
+      <p>A balanced, corporate-but-modern visual style rather than a strict framework like Material Design or iOS — tailored specifically to Craigslist's existing user base, designed primarily for web across desktop, laptop, and tablet.</p>
+    </section>
+
+    <section class="section container">
+      <h2>Learnings</h2>
+      <p>This project was a lesson in restraint — the goal was never to make Craigslist look like every other modern marketplace, but to fix what was actually broken (navigation, information density) while protecting what already worked. Reverse usability testing on a live product, rather than a prototype, also became a technique I've kept using since.</p>
+    </section>
+
+    <section class="section container">
+      <a class="btn btn--ghost" href="../projects.html">← Back to projects</a>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer__grid">
+      <p>© 2026 Vraj Joshi. Built from scratch with HTML, CSS &amp; Three.js.</p>
+      <ul class="footer__links">
+        <li><a href="mailto:vrajjoshi123@gmail.com">Email</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn<!-- TODO: add real LinkedIn URL --></a></li>
+        <li><a href="https://github.com/Vraj747" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+</body>
+</html>
