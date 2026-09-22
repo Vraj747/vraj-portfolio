@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vraj747.github.io/vraj-portfolio/sitemap.xml

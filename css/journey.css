@@ -1,0 +1,122 @@
+/* 3D landing journey */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 20%, #14161c 0%, #0a0b0f 70%);
+}
+
+.journey {
+  position: relative;
+  z-index: 1;
+}
+
+.journey__panel {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: var(--space-xl);
+}
+
+.journey__panel-inner {
+  max-width: 640px;
+  background: rgba(20, 22, 28, 0.55);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.journey__panel.is-visible .journey__panel-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.journey__panel--hero .journey__panel-inner {
+  max-width: 760px;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  padding: 0;
+  opacity: 1;
+  transform: none;
+}
+
+.journey__scroll-cue {
+  margin-top: var(--space-lg);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.journey__scroll-cue svg {
+  animation: journey-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes journey-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey__scroll-cue svg {
+    animation: none;
+  }
+  .journey__panel-inner {
+    transition: opacity 200ms ease;
+    transform: none;
+  }
+}
+
+.journey__project-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.journey__project-list a {
+  display: block;
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.journey__project-list a:hover {
+  border-color: var(--color-accent-2);
+  background: var(--color-surface-raised);
+}
+
+.journey__project-list span {
+  display: block;
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0.25em;
+}
+
+/* No-WebGL / no-JS fallback */
+.no-webgl #bg-canvas {
+  display: none;
+}
+
+.no-js .journey__panel-inner,
+.no-webgl .journey__panel-inner {
+  opacity: 1;
+  transform: none;
+}
