@@ -21,7 +21,16 @@
   padding-block: var(--space-xl);
 }
 
+.journey__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  width: 100%;
+}
+
 .journey__panel-inner {
+  flex: 1 1 420px;
   max-width: 640px;
   background: rgba(10, 11, 15, 0.78);
   backdrop-filter: blur(14px);
@@ -36,6 +45,90 @@
 .journey__panel.is-visible .journey__panel-inner {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Right-side companion card per panel */
+.journey__aside {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background: rgba(10, 11, 15, 0.78);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border);
+  border-left: 2px solid var(--color-accent-2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease 120ms, transform 600ms ease 120ms;
+}
+
+.journey__panel.is-visible .journey__aside {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.journey__aside-list,
+.journey__stats-list,
+.journey__aside-links {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-sm) 0 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.journey__aside-list li {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.journey__aside-list li strong {
+  display: block;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  margin-bottom: 0.2em;
+}
+
+.journey__stats-list li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.journey__stat-num {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--step-2);
+  background: var(--color-accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+.journey__aside-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-heading);
+}
+
+.journey__aside-links a:hover {
+  color: var(--color-accent-2);
+}
+
+@media (max-width: 900px) {
+  .journey__row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .journey__panel-inner,
+  .journey__aside {
+    max-width: 640px;
+  }
 }
 
 .journey__panel--hero .journey__panel-inner {
@@ -110,13 +203,87 @@
   margin-top: 0.25em;
 }
 
+/* Scroll progress rail */
+.journey-rail {
+  position: fixed;
+  right: var(--space-lg);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.journey-rail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.journey-rail a {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.3em 0;
+  text-decoration: none;
+  color: var(--color-text-muted);
+}
+
+.journey-rail__dot {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-border);
+  border: 1px solid var(--color-text-muted);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.journey-rail__label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.journey-rail a:hover .journey-rail__label,
+.journey-rail a:focus-visible .journey-rail__label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.journey-rail a.is-active .journey-rail__dot {
+  background: var(--color-accent-gradient);
+  border-color: transparent;
+  transform: scale(1.3);
+}
+
+.journey-rail a.is-active .journey-rail__label {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .journey-rail {
+    display: none;
+  }
+}
+
 /* No-WebGL / no-JS fallback */
 .no-webgl #bg-canvas {
   display: none;
 }
 
 .no-js .journey__panel-inner,
-.no-webgl .journey__panel-inner {
+.no-js .journey__aside,
+.no-webgl .journey__panel-inner,
+.no-webgl .journey__aside {
   opacity: 1;
   transform: none;
 }

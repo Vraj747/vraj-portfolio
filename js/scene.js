@@ -137,3 +137,21 @@ if (panels.length) {
   );
   panels.forEach((panel) => observer.observe(panel));
 }
+
+// Progress rail: highlight the link for whichever panel is currently in view
+const railLinks = document.querySelectorAll(".journey-rail a");
+if (railLinks.length && panels.length) {
+  const railObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const link = document.querySelector(`.journey-rail a[data-panel="${entry.target.dataset.panel}"]`);
+        if (!link) return;
+        railLinks.forEach((l) => l.classList.remove("is-active"));
+        link.classList.add("is-active");
+      });
+    },
+    { threshold: 0.5 }
+  );
+  panels.forEach((panel) => railObserver.observe(panel));
+}

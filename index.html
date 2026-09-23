@@ -47,49 +47,96 @@
     </nav>
   </header>
 
+  <nav class="journey-rail" aria-label="Journey sections">
+    <ul>
+      <li><a href="#panel-home" data-panel="home"><span class="journey-rail__dot" aria-hidden="true"></span><span class="journey-rail__label">Home</span></a></li>
+      <li><a href="#panel-about" data-panel="about"><span class="journey-rail__dot" aria-hidden="true"></span><span class="journey-rail__label">About</span></a></li>
+      <li><a href="#panel-projects" data-panel="projects"><span class="journey-rail__dot" aria-hidden="true"></span><span class="journey-rail__label">Projects</span></a></li>
+      <li><a href="#panel-contact" data-panel="contact"><span class="journey-rail__dot" aria-hidden="true"></span><span class="journey-rail__label">Contact</span></a></li>
+    </ul>
+  </nav>
+
   <main id="main" class="journey">
-    <section class="journey__panel journey__panel--hero container">
-      <div class="journey__panel-inner">
-        <span class="eyebrow">Software Developer &amp; UX Designer</span>
-        <h1>I'm Vraj. I build the interface and what runs behind it.</h1>
-        <p>Scroll to move through a short version of how I work — from research and design to the code that ships it. Or skip straight to <a href="about.html">my background</a>, <a href="projects.html">projects</a>, or the full <a href="case-study.html">case study</a>.</p>
-        <span class="journey__scroll-cue">
-          Scroll
-          <svg width="14" height="18" viewBox="0 0 14 18" fill="none" aria-hidden="true">
-            <path d="M7 1V17M7 17L1 11M7 17L13 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </span>
+    <section class="journey__panel journey__panel--hero container" id="panel-home" data-panel="home">
+      <div class="journey__row">
+        <div class="journey__panel-inner">
+          <span class="eyebrow">Software Developer &amp; UX Designer</span>
+          <h1>I'm Vraj. I build the interface and what runs behind it.</h1>
+          <p>Scroll to move through a short version of how I work — from research and design to the code that ships it. Or skip straight to <a href="about.html">my background</a>, <a href="projects.html">projects</a>, or the full <a href="case-study.html">case study</a>.</p>
+          <span class="journey__scroll-cue">
+            Scroll
+            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" aria-hidden="true">
+              <path d="M7 1V17M7 17L1 11M7 17L13 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+        <aside class="journey__aside" aria-label="Toolkit">
+          <p class="card-label">Building with</p>
+          <ul class="tag-list">
+            <li>JavaScript</li><li>Three.js</li><li>React</li><li>Figma</li><li>Node.js</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section class="journey__panel container">
-      <div class="journey__panel-inner">
-        <span class="eyebrow">About</span>
-        <h2>Developer first, designer always.</h2>
-        <p>I'm a final-term student in IT Innovation &amp; Design at Conestoga College. I've led design and dev teams, run user research from scratch, and shipped both the UI and the backend behind it — so I design with an understanding of what's actually feasible to build.</p>
-        <a class="btn btn--ghost" href="about.html">Read the full background →</a>
+    <section class="journey__panel container" id="panel-about" data-panel="about">
+      <div class="journey__row">
+        <div class="journey__panel-inner">
+          <span class="eyebrow">About</span>
+          <h2>Developer first, designer always.</h2>
+          <p>I'm a final-term student in IT Innovation &amp; Design at Conestoga College. I've led design and dev teams, run user research from scratch, and shipped both the UI and the backend behind it — so I design with an understanding of what's actually feasible to build.</p>
+          <a class="btn btn--ghost" href="about.html">Read the full background →</a>
+        </div>
+        <aside class="journey__aside" aria-label="Quick facts">
+          <p class="card-label">Quick facts</p>
+          <ul class="journey__aside-list">
+            <li><strong>Program</strong>IT Innovation &amp; Design, Conestoga College</li>
+            <li><strong>Path</strong>16-month co-op, now part-time while finishing school</li>
+            <li><strong>Focus</strong>Design systems, front-end builds, user research</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section class="journey__panel container">
-      <div class="journey__panel-inner">
-        <span class="eyebrow">Projects</span>
-        <h2>Six problems, six different solutions.</h2>
-        <p>Research-led UX work, a desktop app built to prove out backend fundamentals, and a case study reworked end-to-end for this site.</p>
-        <ul class="journey__project-list">
-          <li><a href="case-study.html">Shopster<span>Full UX case study — research through final design brief</span></a></li>
-          <li><a href="projects/send-it-up.html">Send-It-Up<span>Door-to-door delivery app, designed around real user interviews</span></a></li>
-          <li><a href="projects.html">See all six projects<span>Including Craigslist redesign, FlexFlow, Payroll &amp; more</span></a></li>
-        </ul>
+    <section class="journey__panel container" id="panel-projects" data-panel="projects">
+      <div class="journey__row">
+        <div class="journey__panel-inner">
+          <span class="eyebrow">Projects</span>
+          <h2>Six problems, six different solutions.</h2>
+          <p>Research-led UX work, a desktop app built to prove out backend fundamentals, and a case study reworked end-to-end for this site.</p>
+          <ul class="journey__project-list">
+            <li><a href="case-study.html">Shopster<span>Full UX case study — research through final design brief</span></a></li>
+            <li><a href="projects/send-it-up.html">Send-It-Up<span>Door-to-door delivery app, designed around real user interviews</span></a></li>
+            <li><a href="projects.html">See all six projects<span>Including Craigslist redesign, FlexFlow, Payroll &amp; more</span></a></li>
+          </ul>
+        </div>
+        <aside class="journey__aside" aria-label="Project stats">
+          <p class="card-label">By the numbers</p>
+          <ul class="journey__stats-list">
+            <li><span class="journey__stat-num">6</span><span>Shipped projects</span></li>
+            <li><span class="journey__stat-num">1</span><span>Full case study, research to dev</span></li>
+            <li><span class="journey__stat-num">3</span><span>Platforms — mobile, web &amp; desktop</span></li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section class="journey__panel container">
-      <div class="journey__panel-inner">
-        <span class="eyebrow">Contact</span>
-        <h2>Want to build something together?</h2>
-        <p>I'm open to internships, contract work, and collaboration on products that need both design thinking and someone who can actually ship the code.</p>
-        <a class="btn btn--primary" href="contact.html">Get in touch →</a>
+    <section class="journey__panel container" id="panel-contact" data-panel="contact">
+      <div class="journey__row">
+        <div class="journey__panel-inner">
+          <span class="eyebrow">Contact</span>
+          <h2>Want to build something together?</h2>
+          <p>I'm open to internships, contract work, and collaboration on products that need both design thinking and someone who can actually ship the code.</p>
+          <a class="btn btn--primary" href="contact.html">Get in touch →</a>
+        </div>
+        <aside class="journey__aside" aria-label="Find me online">
+          <p class="card-label">Find me</p>
+          <ul class="journey__aside-links">
+            <li><a href="mailto:vrajjoshi123@gmail.com">Email →</a></li>
+            <li><a href="https://www.linkedin.com/in/vraj-joshi" target="_blank" rel="noopener">LinkedIn →</a></li>
+            <li><a href="https://github.com/Vraj747" target="_blank" rel="noopener">GitHub →</a></li>
+          </ul>
+        </aside>
       </div>
     </section>
   </main>
