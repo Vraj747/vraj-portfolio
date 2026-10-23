@@ -7,6 +7,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* A2: keep anchored/focused elements clear of the sticky header (WCAG 2.2 · 2.4.11 Focus Not Obscured) */
+  scroll-padding-top: 5rem;
+  color-scheme: dark;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -39,6 +42,11 @@ video,
 canvas {
   max-width: 100%;
   display: block;
+}
+
+/* A2: width/height attributes reserve space (no layout shift); height:auto keeps the true aspect ratio */
+img {
+  height: auto;
 }
 
 h1,
@@ -124,4 +132,28 @@ ol {
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+/* A2: Windows High Contrast / forced-colors support */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 3px solid Highlight;
+  }
+  .btn,
+  .card,
+  .journey__panel-inner,
+  .journey__aside {
+    border: 1px solid CanvasText;
+  }
+  /* gradient-clipped numbers lose their background in forced colors, so give them a real text colour */
+  .journey__stat-num {
+    background: none;
+    color: CanvasText;
+    -webkit-text-fill-color: currentColor;
+  }
+}
+
+/* A2: let long strings (emails, URLs) wrap instead of forcing horizontal scroll at 320px / 400% zoom */
+h1, h2, h3, h4, p, li, a {
+  overflow-wrap: break-word;
 }

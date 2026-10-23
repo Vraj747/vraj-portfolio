@@ -15,6 +15,7 @@
 
 .journey__panel {
   min-height: 100vh;
+  min-height: 100svh; /* A2: mobile browser toolbars make 100vh taller than the visible area */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,6 +66,15 @@
 .journey__panel.is-visible .journey__aside {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* A2: keyboard users can Tab into a panel before the scroll-reveal observer fires —
+   never leave focus on invisible content. */
+.journey__panel:focus-within .journey__panel-inner,
+.journey__panel:focus-within .journey__aside {
+  opacity: 1;
+  transform: none;
+  transition: none; /* appear instantly — a keyboard user must never wait for focused content to fade in */
 }
 
 .journey__aside-list,
@@ -123,11 +133,29 @@
   .journey__row {
     flex-direction: column;
     align-items: stretch;
+    gap: var(--space-md);
   }
 
+  /* A2: in a column, flex-basis acts as a HEIGHT — reset it or cards stretch into tall empty boxes */
   .journey__panel-inner,
   .journey__aside {
+    flex: 0 0 auto;
     max-width: 640px;
+  }
+}
+
+/* A2: phones — less padding inside panels so text keeps a comfortable measure */
+@media (max-width: 480px) {
+  .journey__panel {
+    padding-block: var(--space-lg);
+  }
+
+  .journey__panel-inner {
+    padding: var(--space-md);
+  }
+
+  .journey__panel--hero .journey__panel-inner {
+    padding: 0;
   }
 }
 

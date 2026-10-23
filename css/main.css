@@ -16,6 +16,11 @@
 }
 
 .nav__brand {
+  /* A2: 44px minimum touch target */
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
   font-family: var(--font-mono);
   font-weight: 600;
   color: var(--color-text);
@@ -155,7 +160,7 @@
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--space-md);
 }
 
@@ -288,7 +293,9 @@
 }
 
 .case-nav a {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 44px; /* A2: touch target */
   padding: var(--space-xs) var(--space-sm);
   color: var(--color-text-muted);
   text-decoration: none;
@@ -299,7 +306,18 @@
   color: var(--color-accent-2);
 }
 
-/* Responsive nav */
+/* Touch devices: every link/button gets a 44px hit area (WCAG 2.5.5 best practice; AA minimum is 24px) */
+@media (pointer: coarse) {
+  .nav__list a,
+  .footer__links a,
+  .journey-rail a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+/* Responsive nav — phones (<= 720px) */
 @media (max-width: 720px) {
   .nav__list {
     display: none;
@@ -319,7 +337,9 @@
   }
 
   .nav__list a {
-    padding: var(--space-sm) 0;
+    display: flex;
+    align-items: center;
+    min-height: 48px;
     width: 100%;
   }
 
@@ -331,12 +351,63 @@
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     color: var(--color-text);
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     cursor: pointer;
   }
 
   .nav {
     position: relative;
+  }
+
+  .page-hero {
+    padding-block: var(--space-xl) var(--space-lg);
+  }
+
+  .section {
+    padding-block: var(--space-lg);
+  }
+
+  .card {
+    padding: var(--space-sm);
+  }
+
+  .footer__grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Tablets (721px – 1024px): inline nav stays, but tighter rhythm and a guaranteed 2-column card grid */
+@media (min-width: 721px) and (max-width: 1024px) {
+  .container {
+    padding-inline: var(--space-md);
+  }
+
+  .nav__list {
+    gap: var(--space-sm);
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-hero {
+    padding-block: var(--space-xl) var(--space-lg);
+  }
+
+  .section {
+    padding-block: var(--space-lg);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Large screens: stop line lengths and hero type from growing without limit */
+@media (min-width: 1600px) {
+  :root {
+    --max-width: 1360px;
   }
 }
